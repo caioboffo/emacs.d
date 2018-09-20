@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: unittest
+# key: ut
+# --
+import unittest
+
+
+class $0(unittest.TestCase):
+
+
+if __name__ == '__main__':
+   unittest.main()

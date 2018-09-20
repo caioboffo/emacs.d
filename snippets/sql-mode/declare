@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: declare
+# key: dec
+# expand-env: ((yas-indent-line 'fixed) (yas-wrap-around-region 'nil))
+# --
+DECLARE
+    ${1:vars}
+BEGIN
+    ${2:statements}
+END;

@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: class(metaclass=ABCMeta): ...
+# key: absclass
+# group Definitions
+# --
+from abc import ABCMeta, abstractmethod
+
+
+class ${1:ClassName}(metaclass=ABCMeta):
+    """${3:Documentation for $1}"""
+    $0

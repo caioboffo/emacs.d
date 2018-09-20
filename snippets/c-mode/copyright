@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: Copyright
+# key: copy
+# --
+/*
+ * Copyright 2017 Caio Boffo Silva <caioboffo@gmail.com>
+ */

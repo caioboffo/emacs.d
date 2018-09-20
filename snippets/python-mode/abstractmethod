@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: abstractmethod
+# key: am
+# group: object oriented
+# --
+@abstractmethod
+def ${1:meth}($2):
+    $0

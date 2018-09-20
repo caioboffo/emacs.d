@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: begin
+# expand-env: ((yas-indent-line 'fixed) (yas-wrap-around-region 'nil))
+# key: beg
+# --
+BEGIN
+    ${1:Statements}
+END;

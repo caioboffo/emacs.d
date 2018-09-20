@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: dbms_output.put_line
+# key: put
+# --
+dbms_output.put_line(${1:String});
