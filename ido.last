@@ -1,0 +1,48 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/home/caio/workspace/c++/" . "refactoring/")
+ ("/home/caio/.emacs.d/" . "custom/")
+ ("/home/caio/Documentos/" . "Receitas/")
+ ("/home/caio/" . ".emacs.d/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/home/caio/.emacs.d/custom/"
+ "/home/caio/.emacs.d/"
+ "/home/caio/Documentos/Receitas/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "setup-rtags.el"
+ "setup-editing.el"
+ "init.el"
+ "pao_de_queijo"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/home/caio/.emacs.d/" (23681 43794 521878 519000) "auto-save-list/" "snippets/" "./" "custom/" "irony/" "themes/" "eshell/" "custom.el" "elpa/" "../" "init.el" "ido.last" "backups/")
+
+ ("/home/caio/" (23681 42968 952954 864000) ".dropbox-dist/" ".bashrc" "Modelos/" ".TeamSpeak 3/" ".lesshst" "snap/" "calculo rendimento poupança.xlsx" ".ccache/" "./" ".designer/" ".ts3client/" ".gconf/" ".bash_history" "vimbkp/" ".sudo_as_admin_successful" "PDF/" ".wine/" ".QtWebEngineProcess/" ".bash_profile" ".nv/" ".viminfo" ".purple/" "Música/" "Documentos/" ".python_history" ".gitconfig" ".gnupg/" ".emacs.d/" ".ICEauthority" "Público/" ".cmake/" ".cache/" ".dbus/" "Downloads/" ".local/" ".mozilla/" "Dropbox/" ".thumbnails/" ".wget-hsts" "Qt/" "Vídeos/" "../" ".tmux.conf" ".xinputrc" ".gdbinit" ".config/" ".gimp-2.8/" "Imagens/" ".dropbox/" "workspace/" ".apport-ignore.xml" "Materiais/" "VirtualBox VMs/" "Gravações/" ".pki/" ".ssh/" ".macromedia/" "Área de Trabalho/")
+
+ ("/home/caio/workspace/c++/refactoring/" (23681 43268 421331 414000) "include/" "./" "src/" "../")
+
+ ("/home/caio/workspace/c++/refactoring/include/" (23681 43752 261340 30000) "./" "movie.hpp" "../")
+
+ ("/home/caio/.emacs.d/custom/" (23681 42762 881523 552000) "./" "setup-rtags.el" "setup-c.el" "setup-helm.el" "setup-general.el" "../" "init-python.el" "setup-powerline.el" "setup-editing.el")
+
+ ("/home/caio/workspace/c++/" (23680 25058 979841 559000) "opengl/" "examples/" "./" "boost/" "qt5/" "cpp-graphard/" "transmission/" "simple-c-compiler/" "gtest-cmake-example/" "gtk/" "wxWidgets/" "CleanGraph/" "coding_problems/" "genetic_algorithm_tsp/" "refactoring/" "bookstore/" "cpp-templates/" "cpp-graphs/" "my_project/" "jupiter/" "statemachine" "hello_cppunit/" "learngit/" "cpp-graphun/" "oop/" "../" "cmake/" "statemachine.cpp" "cppunit/" "sample_project_sqlite/" "autoconf/" "hellocmake/" "patterns/" "libraries/")
+
+ ("/home/caio/Documentos/Receitas/" (23677 37977 838565 227000) "bolo_milho.txt" "salame.txt" "pao_australiano.txt" "Caponata de Berinjela.txt" "massa_podre.txt" "lanche.txt" "biscoito_polvilho.txt" "PIN PokerStars 058996.txt" "pizza_massa_madre.txt" "./" "pizza_pan.txt" "dinner_rolls.txt" "pão de laranja.txt" "pao_de_batata.txt" "Massa básica para salgados.txt" "pao_tartine.txt" "pao_fermento_natural.txt" "pao_frances.txt" "20842067_790335197811982_8553467981461143016_n.jpg" "hamburguer.txt" "pao_integral.txt" "bolo_de_laranja.txt" "panetone_italiano.txt" "pao_recheado.txt" "pao_de_graos.txt" "pao_de_chocolate.txt" "relish.txt" "panetone_shimura.txt" "ketchup.txt" "pao_peasant.txt" "pao_com_pesto.txt" "pao_de_alho.txt" "panetone.txt" "brioche.txt~" "pao_caseiro.txt" "cuca.txt" "empadaoDeFrango.txt" "pao_de_queijo.txt" "Molho Pimenta Fermentado tipo Tabasco.pdf" "petit-gateau.txt" "panetone-meia.txt" "indicacao_gluten.txt" "fatias_hingaras.txt" "pizza_hassin.txt" "esfirras.txt" "pao_baguette.txt" "pao_de_fuba.txt" "../" "makisushi_tradicional.txt" "pao_de_queijo" "yakisoba.txt" "tórtano.txt" "pao_de_torresmo.txt" "pizza_maça.txt" "bolo_de_cacau.txt" "massa_madre" "pizza_basica.txt" "pao_de_milho.txt" "brioche.txt" "pnetone_shimur.txt" "quiche_atum.txt")
+
+ ("/home/caio/Documentos/" (23631 23391 657143 214000) "NBR_ISO_27002.pdf" "linux_help.jpg" "Programas/" "./" "Sybex_lpic1_3e-2013.pdf" "Luminária-Passo-a-Passo-2.jpg" "todo.org" "Curriculo/" "ISO17799_Modulo1.pdf" "itens de venda.odt" "itens de venda.pdf" "reforma_ortografica.pdf" "Super Mario All-Stars + Super Mario World (USA).sfc" "Sourdough_eBook.pdf" "easy-hacks.odt" "2013-07-26-libreoffice-non-leaf-modules.png" "Helps/" "Tabela-excel-true-natural-bodybuildiing.ods" "UEM Graduação/" "VitoloBookHandoutComplete3.pdf" "theartofcalligraphy.pdf" "Simulação Imposto CLT vs PJ.ods" "Receitas/" "Modeling/" "Estudos/" "aula_1_curso_R_13_5_2017.pdf.pdf" "Rubiks.pdf" "processamento do leite.pdf" "../" "StarCraft II/" "english intervew.odt" "Luminária-Passo-a-Passo-4.jpg" "linux-esentials-manual.pdf" "Violão/" "Copperplate_Victorian Handwriting.pdf")
+
+ ("/home/caio/workspace/" (23640 45984 253783 285000) "multithreadHLRC/" "sed/" "./" "patch_sample/" "ninja/" "prolog/" "code/" "python/" "sqlite/" "java/" "elisp/" "awk/" "racket/" "typescript/" "assembly/" "llvm-tests/" "c/" "flex/" "m4/" "hlrc/" "javascript/" "dot/" "redes/" "macros/" "c++/" "bison/" "html/" "plsql/" "llvm/" "../" "shellscript/" "docker/" "opensource/")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t

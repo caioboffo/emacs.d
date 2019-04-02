@@ -5,13 +5,13 @@
  ;; If there is more than one, they won't work right.
  '(company-c-headers-path-system
    (quote
-    ("/usr/include/c++/7/" "/usr/include/" "/usr/local/include/")))
+	("/usr/include/c++/7/" "/usr/include/" "/usr/local/include/")))
  '(custom-safe-themes
    (quote
-    ("02591317120fb1d02f8eb4ad48831823a7926113fa9ecfb5a59742420de206e0" . t)))
+	("02591317120fb1d02f8eb4ad48831823a7926113fa9ecfb5a59742420de206e0" . t)))
  '(package-selected-packages
    (quote
-    (evil-indent-textobject evil-surround evil-leader evil projectile helm company yasnippet flycheck helm-gtags irony git-commit async elpy zygospore whitespace-cleanup-mode use-package undo-tree powerline neotree memoize markdown-preview-mode magit iedit highlight-stages helm-swoop helm-projectile gradle-mode goto-chg ggtags flycheck-pkg-config flycheck-irony company-irony company-c-headers clean-aindent-mode))))
+	(helm-rtags rtags smart-compile irony company-irony-c-headers qml-mode elpy evil-indent-textobject evil-surround evil-leader evil projectile helm company yasnippet flycheck git-commit async zygospore whitespace-cleanup-mode use-package undo-tree powerline neotree memoize markdown-preview-mode magit iedit highlight-stages helm-swoop helm-projectile gradle-mode goto-chg ggtags flycheck-pkg-config flycheck-irony company-irony company-c-headers clean-aindent-mode))))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

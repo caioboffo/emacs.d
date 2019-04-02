@@ -52,7 +52,7 @@
 ;; set appearance of a tab that is represented by n spaces
 (setq-default indent-tabs-mode nil)
 (defvaralias 'c-basic-offset 'tab-width)
-(setq-default tab-width 4)
+(setq-default tab-width 4 )
 
 ;; apply defaul size to windows
 ;;(setq default-frame-alist '((width . 82) (height . 24)))
@@ -62,6 +62,9 @@
 (load-theme 'idea-darkula t)
 ;;(add-to-list 'default-frame-alist '(font . "Liberation mono for powerline 10"))
 (scroll-bar-mode -1)
+
+;; Enable SemanticDb
+;;(semantic-mode 1)
 
 ;; Package zygospore
 (use-package zygospore

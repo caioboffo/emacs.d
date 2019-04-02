@@ -13,6 +13,7 @@
 (add-to-list 'custom-theme-load-path (expand-file-name "themes" user-emacs-directory))
 
 (add-to-list 'exec-path "/usr/local/bin")
+(add-to-list 'exec-path "~/.local/bin")
 
 ;; Don't litter my init file
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
@@ -20,7 +21,7 @@
 
 ;;; Standard package repositories
 (add-to-list 'package-archives '("melpa"        . "http://melpa.org/packages/"))
-
+(add-to-list 'package-archives '("melpa-stable"  . "https://stable.melpa.org/packages/"))
 (package-initialize)
 
 ;; Install 'use-package' if necessary
@@ -38,6 +39,7 @@
 
 (require 'setup-general)
 (require 'setup-editing)
+(require 'setup-rtags)
 (require 'setup-powerline)
 (require 'setup-c)
 (require 'setup-helm)

@@ -8,8 +8,7 @@
   :ensure t
   :config
   (elpy-enable)
-  ;;(setq elpy-modules (delq 'elpy-module-flymake elpy-modules))
-  (setq elpy-rpc-backend "jedi")
+  (setq elpy-modules (delq 'elpy-module-flymake elpy-modules))
   (setq elpy-rpc-python-command "python3")
   (setq elpy-rpc--backend-python-command "python3")
   (setq python-shell-interpreter "python3")

@@ -6,6 +6,7 @@
 (set-language-environment "UTF-8")
 (prefer-coding-system 'utf-8)
 
+(setq-default indent-tabs-mode nil)
 
 (delete-selection-mode)
 (global-set-key (kbd "RET") 'newline-and-indent)
@@ -27,10 +28,7 @@
 
 ;; PACKAGE: iedit
 (use-package iedit
-  :ensure t
-  :bind (("C-;" . iedit-mode))
-  :init
-  (setq iedit-toggle-key-default nil))
+  :ensure t)
 
 (electric-pair-mode t)
 
@@ -75,9 +73,10 @@
   (global-company-mode t)
   (setq company-tooltip-align-annotations t)
   (setq company-tooltip-limit 20)
-  (setq company-idle-delay .3)
+  (setq company-idle-delay 0)
   (setq company-begin-commands '(self-insert-command))
-  (global-set-key (kbd "C-c /") 'company-files))
+  :config
+  (global-set-key (kbd "<C-M-SPC>") 'company-complete-common))
 
 (use-package magit
   :ensure t
@@ -89,14 +88,15 @@
   :config (global-whitespace-cleanup-mode))
 
 
-(use-package evil
-  :ensure t
-  :config
-  (evil-mode t))
-(use-package evil-surround
-  :ensure t
-  :config
-  (global-evil-surround-mode))
+;; (use-package evil
+;;   :ensure t
+;;   :config
+;;   (evil-mode t))
+
+;; (use-package evil-surround
+;;   :ensure t
+;;   :config
+;;   (global-evil-surround-mode))
 
 (provide 'setup-editing)
 ;;; setup-editing.el ends here
