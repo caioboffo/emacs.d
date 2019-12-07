@@ -9,7 +9,7 @@
 (setq-default c-default-style "linux"
       tab-width 4
       c-basic-offset 4
-      indent-tabs-mode t)
+      indent-tabs-mode nil)
 
 (use-package projectile
   :ensure t
@@ -43,11 +43,29 @@
   :config
   (add-hook 'flycheck-mode-hook #'flycheck-irony-setup))
 
-
 (use-package company-c-headers
   :ensure t
   :init
   (add-to-list 'company-backends 'company-c-headers))
+
+(use-package clang-format
+  :ensure t
+  :config
+  (add-hook 'c-mode-common-hook
+            (function (lambda ()
+                        (add-hook 'before-save-hook
+                                  'clang-format-buffer)))))
+
+(defun reformat-region (&optional b e)
+  (interactive "r")
+  (when (not (buffer-file-name))
+    (error "A buffer must be associated with a file in order to use REFORMAT-REGION."))
+  (when (not (executable-find "clang-format"))
+    (error "clang-format not found."))
+  (shell-command-on-region b e
+                           "clang-format -style=file"
+                           (current-buffer) t)
+  (indent-region b e))
 
 (provide 'setup-c)
 ;;; setup-c.el ends here

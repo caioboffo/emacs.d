@@ -10,8 +10,6 @@
 
 (delete-selection-mode)
 (global-set-key (kbd "RET") 'newline-and-indent)
-(global-set-key (kbd "C-c C-c") 'comment-region)
-(global-set-key (kbd "C-c C-u") 'uncomment-region)
 
 ;; Package: undo-tree
 ;; GROUP: Editing -> Undo -> Undo Tree
@@ -28,7 +26,8 @@
 
 ;; PACKAGE: iedit
 (use-package iedit
-  :ensure t)
+  :ensure t
+  :bind ("C-c ;" . iedit-mode))
 
 (electric-pair-mode t)
 
@@ -85,8 +84,38 @@
 
 (use-package whitespace-cleanup-mode
   :ensure t
-  :config (global-whitespace-cleanup-mode))
+  :config
+  (global-whitespace-cleanup-mode))
 
+;; Editing assembly code
+(defun my-asm-mode-hook ()
+  "My asm mode hook."
+  ;; you can use `comment-dwim' (M-;) for this kind of behaviour anyway
+  (local-unset-key (vector asm-comment-char))
+  ;; (local-unset-key "<return>") ; doesn't work. "RET" in a terminal.  http://emacs.stackexchange.com/questions/13286/how-can-i-stop-the-enter-key-from-triggering-a-completion-in-company-mode
+  (electric-indent-local-mode)  ; toggle off
+;  (setq tab-width 4)
+  (setq indent-tabs-mode nil)
+  ;; asm-mode sets it locally to nil, to "stay closer to the old TAB behaviour".
+  ;; (setq tab-always-indent (default-value 'tab-always-indent))
+
+  (defun asm-calculate-indentation ()
+  (or
+   ;; Flush labels to the left margin.
+;   (and (looking-at "\\(\\.\\|\\sw\\|\\s_\\)+:") 0)
+   (and (looking-at "[.@_[:word:]]+:") 0)
+   ;; Same thing for `;;;' comments.
+   (and (looking-at "\\s<\\s<\\s<") 0)
+   ;; %if nasm macro stuff goes to the left margin
+   (and (looking-at "%") 0)
+   (and (looking-at "c?global\\|section\\|default\\|align\\|INIT_..X") 0)
+   ;; Simple `;' comments go to the comment-column
+   ;(and (looking-at "\\s<\\(\\S<\\|\\'\\)") comment-column)
+   ;; The rest goes at column 4
+   (or 4)))
+  )
+
+(add-hook 'asm-mode-hook #'my-asm-mode-hook)
 
 ;; (use-package evil
 ;;   :ensure t

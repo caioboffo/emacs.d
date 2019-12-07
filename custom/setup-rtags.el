@@ -10,6 +10,8 @@
 (use-package helm-rtags
   :ensure t)
 
+(use-package flycheck-rtags
+  :ensure t)
 ;; ensure that we use only rtags checking
 ;; https://github.com/Andersbakken/rtags#optional-1
 (defun setup-flycheck-rtags ()

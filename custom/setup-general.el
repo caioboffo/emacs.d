@@ -49,17 +49,14 @@
           (lambda () (interactive)
             (setq show-trailing-whitespace 1)))
 
-;; set appearance of a tab that is represented by n spaces
-(setq-default indent-tabs-mode nil)
-(defvaralias 'c-basic-offset 'tab-width)
-(setq-default tab-width 4 )
-
 ;; apply defaul size to windows
 ;;(setq default-frame-alist '((width . 82) (height . 24)))
 
 ;; change apearance Font and Theme
+(use-package dracula-theme
+	     :ensure t)
+(load-theme 'dracula t)
 
-(load-theme 'idea-darkula t)
 ;;(add-to-list 'default-frame-alist '(font . "Liberation mono for powerline 10"))
 (scroll-bar-mode -1)
 
@@ -69,7 +66,7 @@
 ;; Package zygospore
 (use-package zygospore
   :ensure t
-  :bind ("C-x 1" . zygospore-toggle-delete-other-windows))
+  :bind ("C-x 0" . zygospore-toggle-delete-other-windows))
 
 ;; Neo Tree
 (use-package neotree
