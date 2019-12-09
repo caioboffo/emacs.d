@@ -1,4 +1,9 @@
 auto-save-list/
+%backup%~
 backups/
+bookmarks
 elpa/
+eshell/
+irony/
+tramp
 transient
