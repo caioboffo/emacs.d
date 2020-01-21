@@ -51,21 +51,14 @@
 (use-package clang-format
   :ensure t
   :config
-  (add-hook 'c-mode-common-hook
-            (function (lambda ()
-                        (add-hook 'before-save-hook
-                                  'clang-format-buffer)))))
-
-(defun reformat-region (&optional b e)
-  (interactive "r")
-  (when (not (buffer-file-name))
-    (error "A buffer must be associated with a file in order to use REFORMAT-REGION."))
-  (when (not (executable-find "clang-format"))
-    (error "clang-format not found."))
-  (shell-command-on-region b e
-                           "clang-format -style=file"
-                           (current-buffer) t)
-  (indent-region b e))
+  (add-hook 'before-save-hook
+            (lambda ()
+              (when (member major-mode '(c-mode c++-mode))
+                (progn
+                  (when (locate-dominating-file "." ".clang-format")
+                    (clang-format-buffer))
+                  ;; return nil to continue saving
+                  nil)))))
 
 (provide 'setup-c)
 ;;; setup-c.el ends here
