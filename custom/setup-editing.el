@@ -80,7 +80,10 @@
 (use-package magit
   :ensure t
   :config
-  (global-set-key (kbd "C-x g") 'magit-status))
+  (global-set-key (kbd "C-x g") 'magit-status)
+  (define-key magit-mode-map
+    (kbd "q")
+    (lambda () (interactive (magit-mode-bury-buffer t)))))
 
 (use-package whitespace-cleanup-mode
   :ensure t
