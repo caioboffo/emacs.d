@@ -3,7 +3,9 @@ auto-save-list/
 backups/
 bookmarks
 elpa/
+elpy/
 eshell/
 irony/
 tramp
 transient
+ido.last
