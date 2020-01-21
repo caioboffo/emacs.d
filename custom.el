@@ -11,7 +11,7 @@
     ("02591317120fb1d02f8eb4ad48831823a7926113fa9ecfb5a59742420de206e0" . t)))
  '(package-selected-packages
    (quote
-    (clang-format markdown-mode nasm-mode evil-surround flyckeck-rtags elpy company-c-headers company-irony irony projectile powerline dracula-theme helm-rtags rtags whitespace-cleanup-mode magit company yasnippet flycheck iedit neotree use-package company-rtags flycheck-rtags web-mode fsm company-irony-c-headers qml-mode evil-indent-textobject evil-leader evil helm zygospore undo-tree memoize markdown-preview-mode highlight-stages gradle-mode flycheck-pkg-config flycheck-irony clean-aindent-mode))))
+    (ace-window yang-mode clang-format cmake-mode markdown-mode nasm-mode evil-surround flyckeck-rtags elpy company-c-headers company-irony irony projectile powerline dracula-theme helm-rtags rtags whitespace-cleanup-mode magit company yasnippet flycheck iedit neotree use-package company-rtags flycheck-rtags web-mode fsm company-irony-c-headers qml-mode evil-indent-textobject evil-leader evil helm zygospore undo-tree memoize markdown-preview-mode highlight-stages gradle-mode flycheck-pkg-config flycheck-irony clean-aindent-mode))))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
