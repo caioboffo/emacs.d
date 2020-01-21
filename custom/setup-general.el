@@ -38,7 +38,7 @@
 (put 'dired-find-alternate-file 'disabled nil)
 
 ;; Move backups to backups folder
-(setq backup-directory-alist '(("" . "~/.emacs.d/backups")))
+(setq backup-directory-alist '(("." . "~/.emacs.d/backups")))
 (setq auto-save-default nil)
 
 ;; Allow answers with y-or-n
@@ -54,7 +54,7 @@
 
 ;; change apearance Font and Theme
 (use-package dracula-theme
-	     :ensure t)
+  :ensure t)
 (load-theme 'dracula t)
 
 ;;(add-to-list 'default-frame-alist '(font . "Liberation mono for powerline 10"))
@@ -72,6 +72,10 @@
 (use-package neotree
   :ensure t
   :config (global-set-key [f8] 'neotree-toggle))
+
+(use-package ace-window
+  :ensure t
+  :bind  ("C-x o" . ace-window))
 
 (provide 'setup-general)
 ;;; setup-general ends here
