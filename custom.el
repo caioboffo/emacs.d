@@ -19,4 +19,8 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(font-latex-sectioning-2-face ((t nil)))
- '(font-latex-sectioning-3-face ((t nil))))
+ '(font-latex-sectioning-3-face ((t nil)))
+ '(magit-diff-added ((t (:background "face-background 'default" :foreground "green"))))
+ '(magit-diff-added-highlight ((t (:background "#464752" :foreground "green"))))
+ '(magit-diff-removed ((t (:background "face-background 'default" :foreground "red"))))
+ '(magit-diff-removed-highlight ((t (:background "#464752" :foreground "red")))))
