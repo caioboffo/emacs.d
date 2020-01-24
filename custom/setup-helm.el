@@ -110,5 +110,46 @@
 ;;       (define-key helm-gtags-mode-map (kbd "M-.") 'helm-gtags-dwim)
 ;;       (define-key helm-gtags-mode-map (kbd "M-,") 'helm-gtags-pop-stack)))
 
+;; Workaround to hide dot files from helm-find-files found in
+;; https://www.reddit.com/r/emacs/comments/5q922h/removing_dot_files_in_helmfindfiles_menu/
+;;
+(require 'cl-lib)
+
+(defvar no-dots-whitelist
+  '()
+  "List of helm buffers in which to show dots.")
+
+(defun no-dots/whitelistedp ()
+  (member (with-helm-buffer (buffer-name)) no-dots-whitelist))
+
+(defun no-dots/helm-ff-filter-candidate-one-by-one (fcn file)
+  (when (or (no-dots/whitelistedp)
+            (not (string-match "\\(?:/\\|\\`\\)\\.\\{1,2\\}\\'" file)))
+    (funcall fcn file)))
+
+(defun no-dots/helm-file-completion-source-p (&rest args) t)
+
+(defun no-dots/helm-attrset (fcn attribute-name value &optional src)
+  (let ((src (or src (helm-get-current-source))))
+    (when src
+      (funcall fcn attribute-name value src))))
+
+(defun no-dots/helm-find-files-up-one-level (fcn &rest args)
+  (advice-add 'helm-file-completion-source-p
+              :around 'no-dots/helm-file-completion-source-p)
+  (advice-add 'helm-attrset
+              :around 'no-dots/helm-attrset)
+  (let ((res (apply fcn args)))
+    (advice-remove 'helm-file-completion-source-p
+                   'no-dots/helm-file-completion-source-p)
+    (advice-remove 'helm-attrset
+                   'no-dots/helm-attrset)
+    res))
+
+(with-eval-after-load 'helm-files
+  (advice-add 'helm-ff-filter-candidate-one-by-one
+              :around 'no-dots/helm-ff-filter-candidate-one-by-one)
+  (advice-add 'helm-find-files-up-one-level
+              :around 'no-dots/helm-find-files-up-one-level))
 
 (provide 'setup-helm)
