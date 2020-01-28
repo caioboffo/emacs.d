@@ -120,6 +120,15 @@
 
 (add-hook 'asm-mode-hook #'my-asm-mode-hook)
 
+;; Evil Numbers
+;; works line C-a/C-x in vim
+(use-package evil-numbers
+  :ensure t
+  :config
+  (global-set-key (kbd "C-c +") 'evil-numbers/inc-at-pt)
+  (global-set-key (kbd "C-c -") 'evil-numbers/dec-at-pt))
+
+
 ;; (use-package evil
 ;;   :ensure t
 ;;   :config
