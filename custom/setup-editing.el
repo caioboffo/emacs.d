@@ -128,6 +128,10 @@
   (global-set-key (kbd "C-c +") 'evil-numbers/inc-at-pt)
   (global-set-key (kbd "C-c -") 'evil-numbers/dec-at-pt))
 
+(use-package plantuml-mode
+  :ensure t
+  :config
+  (setq plantuml-default-exec-mode 'jar))
 
 ;; (use-package evil
 ;;   :ensure t
