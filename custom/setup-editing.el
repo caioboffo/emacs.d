@@ -131,7 +131,8 @@
 (use-package plantuml-mode
   :ensure t
   :config
-  (setq plantuml-default-exec-mode 'jar))
+  (setq plantuml-default-exec-mode 'jar
+        plantuml-indent-level 2))
 
 ;; (use-package evil
 ;;   :ensure t
