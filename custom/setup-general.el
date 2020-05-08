@@ -77,5 +77,16 @@
   :ensure t
   :bind  ("C-x o" . ace-window))
 
+
+(defun sort-lines-nocase ()
+  "Sort lines ignoring the case."
+  (interactive)
+  (let ((sort-fold-case t))
+    (call-interactively 'sort-lines)))
+
+;; Setting capture a tool to track TODO items
+;; (setq org-default-notes-file (concat org-directory "/notes/todo.org"))
+
+
 (provide 'setup-general)
 ;;; setup-general ends here
