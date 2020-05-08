@@ -9,10 +9,24 @@
  '(custom-safe-themes
    (quote
     ("02591317120fb1d02f8eb4ad48831823a7926113fa9ecfb5a59742420de206e0" . t)))
+ '(magit-blame-styles
+   (quote
+    ((headings
+      (heading-format . "%-20a %C %s
+"))
+     (margin
+      (margin-format " %s%f" " %C %a" " %H")
+      (margin-width . 42)
+      (margin-face . magit-blame-margin)
+      (margin-body-face magit-blame-dimmed))
+     (highlight
+      (highlight-face . magit-blame-highlight))
+     (lines
+      (show-message . t)
+      (show-lines . t)))))
  '(package-selected-packages
    (quote
-    (plantuml-mode cmake-project evil-numbers ace-window yang-mode clang-format cmake-mode markdown-mode nasm-mode evil-surround flyckeck-rtags elpy company-c-headers company-irony irony projectile powerline dracula-theme helm-rtags rtags whitespace-cleanup-mode magit company yasnippet flycheck iedit neotree use-package company-rtags flycheck-rtags web-mode fsm company-irony-c-headers qml-mode evil-indent-textobject evil-leader evil helm zygospore undo-tree memoize markdown-preview-mode highlight-stages gradle-mode flycheck-pkg-config flycheck-irony clean-aindent-mode)))
- '(send-mail-function (quote mailclient-send-it)))
+    (plantuml plantuml-mode magit-org-todos magit-gerrit evil-numbers ace-window yang-mode clang-format cmake-mode markdown-mode nasm-mode evil-surround flyckeck-rtags elpy company-c-headers company-irony irony projectile powerline dracula-theme helm-rtags rtags whitespace-cleanup-mode magit company yasnippet flycheck iedit neotree use-package company-rtags flycheck-rtags web-mode fsm company-irony-c-headers qml-mode evil-indent-textobject evil-leader evil helm zygospore undo-tree memoize markdown-preview-mode highlight-stages gradle-mode flycheck-pkg-config flycheck-irony clean-aindent-mode))))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
