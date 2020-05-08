@@ -27,8 +27,8 @@
   (require 'company)
   (define-key c-mode-base-map (kbd "M-.")
 	(function rtags-find-symbol-at-point))
-  (define-key c-mode-base-map (kbd "M-,")
-	(function rtags-find-references-at-point))
+  ;; (define-key c-mode-base-map (kbd "M-;")
+  ;;   (function rtags-find-virtuals-at-point))
   ;; disable prelude's use of C-c r, as this is the rtags keyboard prefix
   ;;(define-key prelude-mode-map (kbd "C-c r") nil)
   ;; install standard rtags keybindings. Do M-. on the symbol below to
