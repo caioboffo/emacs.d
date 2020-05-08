@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: test fixture
+# key: tf
+# --
+TEST_F(${1:test_fixture}, ${2:test_name})
+{
+    $0
+}
