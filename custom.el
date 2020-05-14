@@ -38,4 +38,5 @@
  '(magit-diff-added ((t (:background "face-background 'default" :foreground "green"))))
  '(magit-diff-added-highlight ((t (:background "#464752" :foreground "green"))))
  '(magit-diff-removed ((t (:background "face-background 'default" :foreground "red"))))
- '(magit-diff-removed-highlight ((t (:background "#464752" :foreground "red")))))
+ '(magit-diff-removed-highlight ((t (:background "#464752" :foreground "red"))))
+ '(org-level-1 ((t (:inherit bold :foreground "lime green" :height 1.1)))))
