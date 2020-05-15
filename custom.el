@@ -6,9 +6,6 @@
  '(company-c-headers-path-system
    (quote
     ("/usr/include/c++/7/" "/usr/include/" "/usr/local/include/")))
- '(custom-safe-themes
-   (quote
-    ("02591317120fb1d02f8eb4ad48831823a7926113fa9ecfb5a59742420de206e0" . t)))
  '(magit-blame-styles
    (quote
     ((headings
