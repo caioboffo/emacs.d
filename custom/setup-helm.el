@@ -50,7 +50,7 @@
   (define-key global-map (kbd "C-x r p")               'helm-projects-history)
   (define-key global-map (kbd "C-x r c")               'helm-addressbook-bookmarks)
   (define-key global-map (kbd "C-c t r")               'helm-dictionary)
-
+  (define-key helm-map (kbd "<tab>")                   'helm-execute-persistent-action)
   (helm-mode 1))
 
 (use-package helm-adaptive
