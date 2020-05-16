@@ -65,12 +65,6 @@
 (use-package helm-info
   :bind ("C-h r" . helm-info-emacs))
 
-(use-package helm-ipython
-  :config
-  (define-key python-mode-map (kbd "<M-tab>") 'helm-ipython-complete)
-  (define-key inferior-python-mode-map (kbd "C-i") 'helm-ipython-complete)
-  (define-key python-mode-map (kbd "C-c C-i") 'helm-ipython-import-modules-from-buffer))
-
 (use-package helm-ring
   :config
   ;; Action for helm kill-ring
