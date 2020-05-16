@@ -53,11 +53,8 @@
 ;;(setq default-frame-alist '((width . 82) (height . 24)))
 
 ;; change apearance Font and Theme
-(use-package dracula-theme
-  :ensure t)
-(load-theme 'dracula t)
+(load-theme 'monokai t)
 
-;;(add-to-list 'default-frame-alist '(font . "Liberation mono for powerline 10"))
 (scroll-bar-mode -1)
 
 ;; Enable SemanticDb
