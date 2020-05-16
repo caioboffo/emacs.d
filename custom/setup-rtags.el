@@ -10,6 +10,9 @@
 (use-package helm-rtags
   :ensure t)
 
+(use-package company-rtags
+  :ensure t)
+
 (use-package flycheck-rtags
   :ensure t)
 ;; ensure that we use only rtags checking
