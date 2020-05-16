@@ -83,7 +83,29 @@
   (global-set-key (kbd "C-x g") 'magit-status)
   (define-key magit-mode-map
     (kbd "q")
-    (lambda () (interactive (magit-mode-bury-buffer t)))))
+    (lambda () (interactive (magit-mode-bury-buffer t))))
+  (setq magit-blame-styles
+        '((headings
+           (heading-format   . "%-20a %C %s\n"))
+          (margin
+           (margin-format    . (" %s%f" " %C %a" " %H"))
+           (margin-width     . 42)
+           (margin-face      . magit-blame-margin)
+           (margin-body-face . (magit-blame-dimmed)))
+          (highlight
+           (highlight-face   . magit-blame-highlight))
+          (lines
+           (show-lines     . t)
+           (show-message   . t))))
+
+  ;; magit diff colors
+  (custom-reset-faces
+   '(magit-diff-added '((t (:background "face-background 'default" :foreground "green"))))
+   '(magit-diff-added-highlight '((t (:background "face-background 'default" :foreground "green"))))
+   '(magit-diff-removed '((t (:background "face-background 'default" :foreground "red"))))
+   '(magit-diff-removed-highlight '((t (:background "face-background 'default" :foreground "red")))))
+
+  )
 
 (use-package whitespace-cleanup-mode
   :ensure t

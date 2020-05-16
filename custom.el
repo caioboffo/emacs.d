@@ -6,21 +6,6 @@
  '(company-c-headers-path-system
    (quote
     ("/usr/include/c++/7/" "/usr/include/" "/usr/local/include/")))
- '(magit-blame-styles
-   (quote
-    ((headings
-      (heading-format . "%-20a %C %s
-"))
-     (margin
-      (margin-format " %s%f" " %C %a" " %H")
-      (margin-width . 42)
-      (margin-face . magit-blame-margin)
-      (margin-body-face magit-blame-dimmed))
-     (highlight
-      (highlight-face . magit-blame-highlight))
-     (lines
-      (show-message . t)
-      (show-lines . t)))))
  '(package-selected-packages
    (quote
     (plantuml plantuml-mode magit-org-todos magit-gerrit evil-numbers ace-window yang-mode clang-format cmake-mode markdown-mode nasm-mode evil-surround flyckeck-rtags elpy company-c-headers company-irony irony projectile powerline dracula-theme helm-rtags rtags whitespace-cleanup-mode magit company yasnippet flycheck iedit neotree use-package company-rtags flycheck-rtags web-mode fsm company-irony-c-headers qml-mode evil-indent-textobject evil-leader evil helm zygospore undo-tree memoize markdown-preview-mode highlight-stages gradle-mode flycheck-pkg-config flycheck-irony clean-aindent-mode))))
@@ -32,8 +17,4 @@
  ;; If there is more than one, they won't work right.
  '(font-latex-sectioning-2-face ((t nil)))
  '(font-latex-sectioning-3-face ((t nil)))
- '(magit-diff-added ((t (:background "face-background 'default" :foreground "green"))))
- '(magit-diff-added-highlight ((t (:background "#464752" :foreground "green"))))
- '(magit-diff-removed ((t (:background "face-background 'default" :foreground "red"))))
- '(magit-diff-removed-highlight ((t (:background "#464752" :foreground "red"))))
  '(org-level-1 ((t (:inherit bold :foreground "lime green" :height 1.1)))))
