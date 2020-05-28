@@ -14,6 +14,9 @@
 ;; Turn visualization of matching parens
 (show-paren-mode 1)
 
+;; Turn highlight line mode
+(global-hl-line-mode t)
+
 (setq visual-line-fringe-indicators '(left-curly-arrow right-curly-arrow))
 
 (setq-default left-fringe-width nil)
