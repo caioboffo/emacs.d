@@ -11,6 +11,13 @@
 (delete-selection-mode)
 (global-set-key (kbd "RET") 'newline-and-indent)
 
+;; duplicate line command
+(global-set-key "\C-d" "\C-a\C- \C-n\M-w\C-y\C-p")
+
+;; set truncate-lines global
+(setq-default truncate-lines t)
+
+;; Package: undo-tree
 ;; Package: undo-tree
 ;; GROUP: Editing -> Undo -> Undo Tree
 (use-package undo-tree
