@@ -38,6 +38,7 @@
 ;;; General Settings
 
 (require 'setup-general)
+(require 'hide-comnt)
 (require 'setup-editing)
 (require 'setup-rtags)
 (require 'setup-powerline)
