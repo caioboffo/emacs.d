@@ -57,7 +57,9 @@
 (use-package flycheck
   :ensure t
   :config
-  (global-flycheck-mode))
+  (add-hook 'after-init-hook #'global-flycheck-mode)
+  (flycheck-add-next-checker 'c/c++-clang 'irony)
+  (flycheck-add-next-checker 'irony 'rtags))
 
 (use-package yasnippet
   :ensure t
