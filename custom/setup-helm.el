@@ -10,22 +10,18 @@
     (if (version< "26.0.50" emacs-version)
         (eval-when-compile (require 'helm-lib)))
 
-    (defun helm-hide-minibuffer-maybe ()
-      (when (with-helm-buffer helm-echo-input-in-header-line)
-        (let ((ov (make-overlay (point-min) (point-max) nil nil t)))
-          (overlay-put ov 'window (selected-window))
-          (overlay-put ov 'face (let ((bg-color (face-background 'default nil)))
-                                  `(:background ,bg-color :foreground ,bg-color)))
-          (setq-local cursor-type nil))))
+    ;; (defun helm-hide-minibuffer-maybe ()
+    ;;   (when (with-helm-buffer helm-echo-input-in-header-line)
+    ;;     (let ((ov (make-overlay (point-min) (point-max) nil nil t)))
+    ;;       (overlay-put ov 'window (selected-window))
+    ;;       (overlay-put ov 'face (let ((bg-color (face-background 'default nil)))
+    ;;                               `(:background ,bg-color :foreground ,bg-color)))
+    ;;       (setq-local cursor-type nil))))
 
-    (add-hook 'helm-minibuffer-set-up-hook 'helm-hide-minibuffer-maybe)
-    ;; The default "C-x c" is quite close to "C-x C-c", which quits Emacs.
-    ;; Changed to "C-c h". Note: We must set "C-c h" globally, because we
-    ;; cannot change `helm-command-prefix-key' once `helm-config' is loaded.
-    (global-set-key (kbd "C-c h") 'helm-command-prefix)
-    (global-set-key (kbd "C-x b") 'helm-mini)
+    ;; (add-hook 'helm-minibuffer-set-up-hook 'helm-hide-minibuffer-maybe)
+
+
     (global-unset-key (kbd "C-x c"))
-
     (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action) ; rebihnd tab to do persistent action
     (define-key helm-map (kbd "C-i") 'helm-execute-persistent-action) ; make TAB works in terminal
     (define-key helm-map (kbd "C-z")  'helm-select-action) ; list actions using C-z
@@ -33,9 +29,6 @@
     (define-key helm-grep-mode-map (kbd "<return>")  'helm-grep-mode-jump-other-window)
     (define-key helm-grep-mode-map (kbd "n")  'helm-grep-mode-jump-other-window-forward)
     (define-key helm-grep-mode-map (kbd "p")  'helm-grep-mode-jump-other-window-backward)
-
-    (when (executable-find "curl")
-      (setq helm-google-suggest-use-curl-p t))
 
     ;; (setq helm-google-suggest-use-curl-p t
     ;;       helm-scroll-amount 4 ; scroll 4 lines other window using M-<next>/M-<prior>
@@ -72,6 +65,10 @@
 
     (global-set-key (kbd "M-x") 'helm-M-x)
     (global-set-key (kbd "C-x b") 'helm-buffers-list)
+        ;; replace list-buffer with helm-mini
+    (global-unset-key (kbd "C-c C-b"))
+    (global-set-key (kbd "C-c C-b") 'helm-mini)
+
     (global-set-key (kbd "C-x C-f") 'helm-find-files)
     (global-set-key (kbd "C-h SPC") 'helm-all-mark-rings)
     (global-set-key (kbd "C-s")     'helm-occur)
