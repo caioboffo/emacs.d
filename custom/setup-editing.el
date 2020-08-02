@@ -163,6 +163,9 @@
   (setq plantuml-default-exec-mode 'jar
         plantuml-indent-level 2))
 
+(use-package linum-relative
+  :ensure t)
+
 ;; (use-package evil
 ;;   :ensure t
 ;;   :config
