@@ -24,6 +24,9 @@
 	(function rtags-find-references-at-point))
   (define-key c-mode-base-map (kbd "M-]")
     (function rtags-find-virtuals-at-point))
+  (define-key c-mode-base-map (kbd "M-*")
+	(function rtags-location-stack-back))
+
   
   (push 'company-rtags company-backends)
   (define-key c-mode-base-map (kbd "<C-tab>") (function company-complete)))
