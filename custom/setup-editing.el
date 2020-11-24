@@ -187,12 +187,19 @@
 (add-hook 'asm-mode-hook #'my-asm-mode-hook)
 
 ;; Evil Numbers
-;; works line C-a/C-x in vim
+;; works like C-a/C-x in vim
 (use-package evil-numbers
   :ensure t
   :config
   (global-set-key (kbd "C-c +") 'evil-numbers/inc-at-pt)
   (global-set-key (kbd "C-c -") 'evil-numbers/dec-at-pt))
+
+(use-package embrace
+  :ensure t
+  :config
+  (global-set-key (kbd "C-c a") 'embrace-add)
+  (global-set-key (kbd "C-c c") 'embrace-change)
+  (global-set-key (kbd "C-c d") 'embrace-delete))
 
 (use-package plantuml-mode
   :ensure t
@@ -208,10 +215,6 @@
 ;;   :config
 ;;   (evil-mode t))
 
-;; (use-package evil-surround
-;;   :ensure t
-;;   :config
-;;   (global-evil-surround-mode))
 
 (provide 'setup-editing)
 ;;; setup-editing.el ends here

@@ -8,7 +8,7 @@
     ("/usr/include/c++/7/" "/usr/include/" "/usr/local/include/")))
  '(package-selected-packages
    (quote
-    (plantuml plantuml-mode magit-org-todos magit-gerrit evil-numbers ace-window yang-mode clang-format cmake-mode markdown-mode nasm-mode evil-surround flyckeck-rtags elpy company-c-headers company-irony irony projectile powerline dracula-theme helm-rtags rtags whitespace-cleanup-mode magit company yasnippet flycheck iedit neotree use-package company-rtags flycheck-rtags web-mode fsm company-irony-c-headers qml-mode evil-indent-textobject evil-leader evil helm zygospore undo-tree memoize markdown-preview-mode highlight-stages gradle-mode flycheck-pkg-config flycheck-irony clean-aindent-mode))))
+    (evil-surround embrace plantuml plantuml-mode magit-org-todos magit-gerrit evil-numbers ace-window yang-mode clang-format cmake-mode markdown-mode nasm-mode flyckeck-rtags elpy company-c-headers company-irony irony projectile powerline dracula-theme helm-rtags rtags whitespace-cleanup-mode magit company yasnippet flycheck iedit neotree use-package company-rtags flycheck-rtags web-mode fsm company-irony-c-headers qml-mode evil-indent-textobject evil-leader helm zygospore undo-tree memoize markdown-preview-mode highlight-stages gradle-mode flycheck-pkg-config flycheck-irony clean-aindent-mode))))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
